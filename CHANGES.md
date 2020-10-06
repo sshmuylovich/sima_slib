@@ -4,5 +4,5 @@
 - new change 2 in this version
 
 ## Attribution
-This Changes record was adapted from urllib3's CHANGES.rst, 
+This record of changes was adapted from urllib3's CHANGES.rst, 
 available at [https://github.com/urllib3/urllib3/blob/master/CHANGES.rst](https://github.com/urllib3/urllib3/blob/master/CHANGES.rst).

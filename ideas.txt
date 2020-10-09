@@ -8,3 +8,5 @@
 - Movie recommender based on twitter analysis
 - Type in Ingredients you have in your kitchen and it finds you a recipe online
 - With word documents, every time you save the word document it creates a copy and stores it in a folder labelled backups
+
+* Checks legitimacy of boggle word and calculates score for each player

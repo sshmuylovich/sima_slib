@@ -1,0 +1,10 @@
+- Prints out what your GitHub tree looks like
+- Solves common Geometry Problems
+- Online Auction System
+- Something that tells you how much time you spent writing on a word doc or something (how much time spent was actually productive)
+- Picks out an outfit for you to wear based on the weather
+- Plagiarism detector
+- Instrument recognition from an audio recording
+- Movie recommender based on twitter analysis
+- Type in Ingredients you have in your kitchen and it finds you a recipe online
+- With word documents, every time you save the word document it creates a copy and stores it in a folder labelled backups

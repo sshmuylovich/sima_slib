@@ -1,6 +1,6 @@
 # sima_boggle
 ## Function:
-To check the validity of each player's words, score their respective lists, and declare a winner. 
+For a round of Boggle: to check the validity of each player's words, score their respective lists, and declare a winner. 
 
 __Thoughts behind how I'm going to get this to work:__
 

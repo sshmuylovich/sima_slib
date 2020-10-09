@@ -13,6 +13,10 @@ The program will then prompt each user to input their words in a comma seperated
 [Rules of Boogle](https://www.fgbradleys.com/rules/Boggle.pdf)
 
 __Class ideas:__
+- Matrix
+- Array List
+- Score
+- Initial Prompted Input
 ## Completed Featuers:
 ## Features in Progress:
 ## Future Features:

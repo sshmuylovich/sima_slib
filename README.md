@@ -7,6 +7,7 @@ __Thoughts behind how I'm going to get this to work:__
 After a game of Boggle, the user will:
 - input the letters used in the round of boggle from left to right, top to bottom
 - input the number of players that round
+
 The program will then prompt each user to input their words in a comma seperated list. The program will compare each word of a player to the other players' lists. If the word belongs to more than half of the players, it gets removed from all lists containing the word. If not, the word is searched for in the Merriam Webster Dictionary. If that word exists, the points gained from that word (based on the word's length) are added to each player that has that word to their respective total score. 
 
 [Rules of Boogle](https://www.fgbradleys.com/rules/Boggle.pdf)

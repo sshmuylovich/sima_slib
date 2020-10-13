@@ -5,7 +5,7 @@ def play_game():
 
     def one_to_two_array(grid):
         oneDArray = np.array(grid)
-        twoDArray = oneDArray.reshape(5,5)
+        twoDArray = oneDArray.reshape(4,4)
 
         return twoDArray
 

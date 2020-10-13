@@ -13,7 +13,7 @@ def play_game():
         return s.split(" ")
 
 
-    value = input("Please enter a the 25 letters that appear on your boggle board with spaces in between:\n")
+    value = input("Please enter the 16 letters that appear on your boggle board with spaces in between:\n")
         
     letters = value.strip().upper() # remove surrounding whitespace to make this more robust to user variation
 

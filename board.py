@@ -2,7 +2,7 @@ from array import *
 import numpy as np
 
 def play_game():
-
+    
     def one_to_two_array(grid):
         oneDArray = np.array(grid)
         twoDArray = oneDArray.reshape(4,4)
@@ -17,9 +17,9 @@ def play_game():
         
     letters = value.strip().upper() # remove surrounding whitespace to make this more robust to user variation
 
-    grid = one_to_two_array(string_to_array(letters))
+    boggle_board = one_to_two_array(string_to_array(letters))
 
-    print(f'You entered {value}, as a boggle board it looks like...\n{grid}')
+    print(f'You entered {value}, as a boggle board it looks like...\n{boggle_board}')
 
     # confirm = input("Does this look correct to you? Yes or No\n")
 

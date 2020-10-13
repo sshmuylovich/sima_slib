@@ -32,3 +32,6 @@ def play_game():
     # else:
     #     x = 1
     #     print(f'There was an error, can you please confirm your board again?')
+
+if __name__ == "__main__":
+    play_game()

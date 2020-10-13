@@ -24,3 +24,4 @@ __Class ideas:__
 - How can I make this more user friendly?
 - What should each of my classes entail?
 - How do I search the Merriam Webster Dictionary for the word? How do I rule out all informal or archaic words?
+  - A potential option: use [this](https://github.com/pfeyz/merriam-webster-api) Python wrapper of the Merrian Webster API. You need to get developer keys from [here](https://www.dictionaryapi.com/) and then take a look at [this](https://github.com/pfeyz/merriam-webster-api/blob/master/examples/define.py) script, which fetches the definition for a given query (or will return `No definitions found for 'word'`). 

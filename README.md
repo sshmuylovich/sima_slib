@@ -17,10 +17,10 @@ The program will then prompt each user to input their words in a comma separated
 - boggle_board.py
 - players
 - check_words_dictionary
+- score
 ## Future Features:
 - check_words_board
 - check_words_players
-- score_words
 - final_results
 ## Questions & Recommended Help:
 - How can I make this more user friendly?

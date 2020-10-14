@@ -23,7 +23,7 @@ def score_word(word):
     '''
 
     if len(word) < 3:
-        return 1
+        return 0
     elif len(word) in [3,4]:
         return 1
     elif len(word) == 5:

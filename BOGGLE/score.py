@@ -1,6 +1,5 @@
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError
-from bs4 import BeautifulSoup
 import time
 
 def score_word(word):

@@ -27,7 +27,7 @@ Date: Oct 14, 2020, Jeffrey Pan (jeffreyzpan)
 
 
 Date: Month Day, Year, [Your name or handle] <[email or website]>
-  - [Brief summary of your changes]
+ - [Brief summary of your changes]
    - Pull Request
 
 ## Attribution

@@ -1,6 +1,35 @@
 from array import *
 import numpy as np
 
+num_player = 1
+
+def test():
+    global num_player
+    num_player += 1
+
+class Player:
+    def __init__(self, name, words, num):
+        self.name = name
+        self.words = words
+        self.num = num
+
+    def Display_Details(self):
+        print("Player Number: ",self.num)
+        print("Player Name: ",self.name)
+        print("Player words: ",self.words)
+
+    list_of_players = list()
+
+    def players():
+        total_num_players = int(input(f'How many total players are there?\n'))
+
+        for x in range(0, total_num_players):
+            test()
+            player = Player(input(f'Please enter the name of player {num_player}:\n'), 
+            input(f'Please enter this player\'s words with spaces in between each word:\n').split(" "), 
+            num_player)
+            list.append(player)
+
 def get_players_names():
     '''
     Function to get player names from use input
@@ -44,6 +73,7 @@ def confirm_players():
         else:
             print(f'\nThere was an error with your input, try again! This time please respond with yes or no.')
             confirm_players()
+
 
 if __name__ == "__main__":
     setup_players_scores()

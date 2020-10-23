@@ -14,19 +14,27 @@ def board_setup():
 
         value = input("Please enter the 16 letters that appear on your boggle board with spaces in between:\n")
         return value
-
+    '''
+    Turns the 16 letter input into a 2D Array
+    '''
     def one_to_two_array(grid):
         oneDArray = np.array(grid)
         twoDArray = oneDArray.reshape(4,4)
 
         return twoDArray
-
+    
+    '''
+    Turns the string into a 1D array
+    '''
     def string_to_array(s):
         return s.split(" ")
 
     def get_board():
         return one_to_two_array(string_to_array(letters))
-
+    '''
+    Prompts the user to affirm the correctness of the board layout
+    Will not continue until the user confirms correctness
+    '''
     def confirm_board():
         confirm = input("Does this look like your expected output?\n")
 
@@ -38,11 +46,17 @@ def board_setup():
         else:
             print(f'\nThere was an error with your input, try again! This time please respond with yes or no.')
             confirm_board()
-
+    
     answer = get_value()
-
-    letters = answer.strip().upper() # remove surrounding whitespace to make this more robust to user variation
-
+    
+    '''
+    Removes surrounding whitespace to make this more robust to user variation
+    '''
+    letters = answer.strip().upper()
+    
+    '''
+    Assures that the input consists of 16 letters with no double spaces
+    '''
     if len(string_to_array(letters))!=16:
         print(f'\nSomething was wrong with your input. Try again!')
         board_setup()

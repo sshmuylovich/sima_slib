@@ -31,6 +31,19 @@ def setup_players_scores():
     scorecard = np.zeros(num_players)
 
     print(f'List of players:{list_of_names}\nand their current scores:{scorecard}')
+    confirm_players()
+
+def confirm_players():
+        confirm = input("\nDoes this look like your expected output?\n")
+
+        if confirm.lower() in ['y', 'yes']:
+            print(f'\nGreat!')
+        elif confirm.lower() in ['n', 'no']:
+            print(f'\nTry again!')
+            setup_players_scores()
+        else:
+            print(f'\nThere was an error with your input, try again! This time please respond with yes or no.')
+            confirm_players()
 
 if __name__ == "__main__":
     setup_players_scores()

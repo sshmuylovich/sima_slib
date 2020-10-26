@@ -52,7 +52,7 @@ def board_setup():
     '''
     Removes surrounding whitespace to make this more robust to user variation
     '''
-    letters = answer.strip().upper()
+    letters = answer.strip().upper() # remove surrounding whitespace to make this more robust to user variation
     
     '''
     Assures that the input consists of 16 letters with no double spaces

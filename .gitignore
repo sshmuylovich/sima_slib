@@ -1,5 +1,6 @@
 # Sima's personal gitignores
-.DS_Store
+# testing
+*.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

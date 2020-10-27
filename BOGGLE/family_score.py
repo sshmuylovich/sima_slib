@@ -1,8 +1,7 @@
-
-
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError
 import time
+# Why do I have these imports?
 
 def score_word(word):
     '''

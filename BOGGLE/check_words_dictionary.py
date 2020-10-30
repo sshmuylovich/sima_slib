@@ -1,3 +1,7 @@
+from urllib.request import urlopen, Request
+from urllib.error import HTTPError
+import time
+
 def check_word_recurse (word, time_bound):
     '''
     A method that returns True if the word is a real word and False otherwise.

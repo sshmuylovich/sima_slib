@@ -2,7 +2,16 @@ from array import *
 import numpy as np
 
 class Board():
+    """
+    Boggle Board
+    """
     def __init__(self, letters):
+        """
+        Instantiate the board with a given string of letters and prompt the user with a confirmation until the board is set up.
+
+        Args:
+            letters (str): String of 16 letters, separated by spaces, to place on the boggle board
+        """
         self.letters = letters
         list_of_letters = letters.strip().upper().split(" ")
 
@@ -13,7 +22,8 @@ class Board():
             value = input("Please enter the 16 letters that appear on your boggle board with spaces in between:\n")
             board = Board(value)
 
-        if len(list_of_letters)!=16:
+        
+        if len(list_of_letters) != 16:
             print(f'\nSomething was wrong with your input. Try again!')
             reset()
         else:
@@ -114,4 +124,5 @@ class Board():
 
 
 value = input("Please enter the 16 letters that appear on your boggle board with spaces in between:\n")
+board = Board (value)
 board = Board(value)

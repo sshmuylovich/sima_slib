@@ -137,11 +137,12 @@ r4_c3.place(relx=.507, rely=.76, relwidth=.24, relheight=.24)
 r4_c4 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
 r4_c4.place(relx=.76, rely=.76, relwidth=.24, relheight=.24)
 
-start_button = tk.Button(frame, text="Play Game", bg='gray', fg='#c63420', command=lambda: play_game())
+start_button = tk.Button(frame, text="Generate New Board", bg='gray', fg='#c63420', command=lambda: play_game())
 start_button.place(relx=0.7, relheight=1, relwidth=0.3)
 
 entry = tk.Entry(frame, font=40)
-entry.place(relwidth=0.65, relheight=1)
+entry.place(relwidth=0.685, relheight=1)
+entry.insert(0, " Enter Board Letters: ")
 
 # button = tk.Button(frame, text="Get Input", bg='gray', fg='blue', font=40, command=lambda: test_function(entry.get()))
 # button.place(relx=0.7, relheight=1, relwidth=0.3)

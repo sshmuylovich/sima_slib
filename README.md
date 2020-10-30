@@ -15,17 +15,16 @@ The program will then prompt each user to input their words in a comma separated
 ## Completed Features:
 ## Features in Progress:
 - boggle_board.py
-- players
-- check_words_dictionary
-- score
+- player.py
+- check_words_dictionary.py
+- score.py
+- family_score.py
+- boggle_gui.py
 ## Future Features:
 - check_words_board
 - check_words_players
 - final_results
 ## Questions & Recommended Help:
-- How can I make this more user friendly?
+- Continue developping [boggle_git.py](https://github.com/sshmuylovich/sima_boggle/blob/main/BOGGLE/boggle_gui.py).
 - How do I search the Merriam Webster Dictionary for the word? How do I rule out all informal or archaic words?
   - A potential option: use [this](https://github.com/pfeyz/merriam-webster-api) Python wrapper of the Merrian Webster API. You need to get developer keys from [here](https://www.dictionaryapi.com/) and then take a look at [this](https://github.com/pfeyz/merriam-webster-api/blob/master/examples/define.py) script, which fetches the definition for a given query (or will return `No definitions found for 'word'`). 
-- How do I take each player from my [players.md](https://github.com/sshmuylovich/sima_boggle/blob/main/BOGGLE/players.py) and create a unique array of strings based on their input? 
-- How do I test that the letters in a word are either next to each other or diagonal on a grid without going through the same grid location more than once? 
-  - Would I create a 4x4 2D Array and then if I use the letter I set that space to zero to prevent repetition?

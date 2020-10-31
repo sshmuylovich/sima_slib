@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import *
 import random
 import os
+# import player
+# from player import *
 
 HEIGHT = 700
 WIDTH = 1200
@@ -57,8 +59,6 @@ def play_game():
 
     letters.clear()
     
-
-
 
 def test_function(entry):
     print("This is the entry: ", entry)

@@ -44,3 +44,8 @@ The program will then prompt each user to input their words in a comma separated
 - Continue developping [boggle_git.py](https://github.com/sshmuylovich/sima_boggle/blob/main/BOGGLE/boggle_gui.py).
 - How do I search the Merriam Webster Dictionary for the word? How do I rule out all informal or archaic words?
   - A potential option: use [this](https://github.com/pfeyz/merriam-webster-api) Python wrapper of the Merrian Webster API. You need to get developer keys from [here](https://www.dictionaryapi.com/) and then take a look at [this](https://github.com/pfeyz/merriam-webster-api/blob/master/examples/define.py) script, which fetches the definition for a given query (or will return `No definitions found for 'word'`). 
+
+
+## Citations
+
+[OpenDyslexic](https://opendyslexic.org/) is a new open sourced font created to increase readability for readers with dyslexia. While not perfect, its typeface was designed with the intention of combating some of the most common symptoms of dyslexia.

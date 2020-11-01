@@ -64,6 +64,9 @@ def test_function(entry):
     print("This is the entry: ", entry)
     # label['text'] = entry
 
+def set_font_open_dyslexic_cubes(self):
+    font = "%(family)s %(size)i %(weight)s %(slant)s" % {'family': 'OpenDyslexicMono', 'size': 70, 'weight': 'normal', 'slant': 'roman', 'underline': 0, 'overstrike': 0}
+    self.configure(font=font)
 
 root = tk.Tk()
 
@@ -89,52 +92,68 @@ frame.place(relx=0.0833, rely=0.07, relwidth=0.83, relheight=0.11)
 board = tk.Frame(left_side, bg='#80c1ff', bd=10)
 board.place(relx=0.0833, rely=0.214, relwidth=0.83, relheight=0.714)
 
-r1_c1 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70))
+r1_c1 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r1_c1)
 r1_c1.place(relx=.001,rely=.001, relwidth=.24, relheight=.24)
 
-r1_c2 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r1_c2 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r1_c2)
 r1_c2.place(relx=.254, rely=.001, relwidth=.24, relheight=.24)
 
-r1_c3 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r1_c3 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r1_c3)
 r1_c3.place(relx=.507, rely=.001, relwidth=.24, relheight=.24)
 
-r1_c4 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r1_c4 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r1_c4)
 r1_c4.place(relx=.76, rely=.001, relwidth=.24, relheight=.24)
 
-r2_c1 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70))
+r2_c1 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r2_c1)
 r2_c1.place(relx=.001,rely=.254, relwidth=.24, relheight=.24)
 
-r2_c2 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r2_c2 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r2_c2)
 r2_c2.place(relx=.254, rely=.254, relwidth=.24, relheight=.24)
 
-r2_c3 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r2_c3 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r2_c3)
 r2_c3.place(relx=.507, rely=.254, relwidth=.24, relheight=.24)
 
-r2_c4 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r2_c4 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r2_c4)
 r2_c4.place(relx=.76, rely=.254, relwidth=.24, relheight=.24)
 
-r3_c1 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70))
+r3_c1 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r3_c1)
 r3_c1.place(relx=.001,rely=.507, relwidth=.24, relheight=.24)
 
-r3_c2 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r3_c2 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r3_c2)
 r3_c2.place(relx=.254, rely=.507, relwidth=.24, relheight=.24)
 
-r3_c3 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r3_c3 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r3_c3)
 r3_c3.place(relx=.507, rely=.507, relwidth=.24, relheight=.24)
 
-r3_c4 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r3_c4 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r3_c4)
 r3_c4.place(relx=.76, rely=.507, relwidth=.24, relheight=.24)
 
-r4_c1 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70))
+r4_c1 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r4_c1)
 r4_c1.place(relx=.001,rely=.76, relwidth=.24, relheight=.24)
 
-r4_c2 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r4_c2 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r4_c2)
 r4_c2.place(relx=.254, rely=.76, relwidth=.24, relheight=.24)
 
-r4_c3 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r4_c3 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r4_c3)
 r4_c3.place(relx=.507, rely=.76, relwidth=.24, relheight=.24)
 
-r4_c4 = tk.Label(board, bg='yellow', font=('Comic Sans MS',70)) 
+r4_c4 = tk.Label(board, bg='yellow')
+set_font_open_dyslexic_cubes(r4_c4)
 r4_c4.place(relx=.76, rely=.76, relwidth=.24, relheight=.24)
 
 start_button = tk.Button(frame, text="Generate New Board", bg='gray', fg='#c63420', command=lambda: play_game())

@@ -14,13 +14,13 @@ The program will then prompt each user to input their words in a comma separated
 
 ## Requirements
  - For Wondows, MacOS, and Linux OTF: 
-  - Go to [Open Dyslexic's Content](https://gumroad.com/d/b958739359e5e36637620f47268d2c87) 
-  - Download OpenDyslexic Mono
+   - Go to [Open Dyslexic's Content](https://gumroad.com/d/b958739359e5e36637620f47268d2c87) 
+   - Download OpenDyslexic Mono
  - For iOS and Android
-  - Go to [Open Dyslexic's Content](https://gumroad.com/d/b958739359e5e36637620f47268d2c87)
-  - Download the compatible OpenDyslexic Font zip file 
-  - Open [boggle_gui.py](https://github.com/sshmuylovich/sima_boggle/blob/main/BOGGLE/GUI/boggle_gui.py)
-  - Change the 'family' value in the following method to the corresponding name in your device's font menu
+   - Go to [Open Dyslexic's Content](https://gumroad.com/d/b958739359e5e36637620f47268d2c87)
+   - Download the compatible OpenDyslexic Font zip file 
+   - Open [boggle_gui.py](https://github.com/sshmuylovich/sima_boggle/blob/main/BOGGLE/GUI/boggle_gui.py)
+   - Change the 'family' value in the following method to the corresponding name in your device's font menu
    ```python
    def set_font_open_dyslexic_cubes(self):
       font = "%(family)s %(size)i %(weight)s %(slant)s" % {'family': 'OpenDyslexicMono', 'size': 70, 

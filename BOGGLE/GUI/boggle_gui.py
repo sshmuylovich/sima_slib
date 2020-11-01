@@ -5,11 +5,14 @@ import os
 # import player
 # from player import *
 
+'''
+    Dimensions of Canvas
+'''
 HEIGHT = 700
 WIDTH = 1200
 
 '''
-    Creating the dice
+    Creates the dice which have letters on each side --> Array of length 6 per die
 '''
 cube_one = ["A","A","E","E","G","N"]
 cube_two = ["A","O","O","T","T","W"]
@@ -28,12 +31,15 @@ cube_fourteen = ["D","E","L","R","V","Y"]
 cube_fifteen = ["E","H","R","T","V","W"]
 cube_sixteen = ["H","L","N","N","R","Z"]
 
+'''
+    Sets font to OpenDyslexic Mono
+'''
 def set_font_open_dyslexic_cubes(self):
     font = "%(family)s %(size)i %(weight)s %(slant)s" % {'family': 'OpenDyslexicMono', 'size': 70, 'weight': 'normal', 'slant': 'roman', 'underline': 0, 'overstrike': 0}
     self.configure(font=font)
 
 '''
-    Letting the user input their own letters
+    Lets the user input their own letters
 '''
 def input_board():
     entry_board = tk.Frame(left_side, bg='#80c1ff', bd=10)
@@ -42,9 +48,15 @@ def input_board():
     entry_button_frame = tk.Frame(left_side, bg='#80c1ff', bd=5)
     entry_button_frame.place(relx=0.0833, rely=0.07, relwidth=0.83, relheight=0.11)
 
+    '''
+        Lets the user exit out of "input mode"
+    '''
     def double_check_quit():
         are_you_sure_frame = tk.Frame(entry_board, bg='#80c1ff', bd=5)
         are_you_sure_frame.place(relx=0.2, rely=0.2, relwidth=0.6, relheight=0.6)
+
+        double_check_question = tk.Label(are_you_sure_frame, font=("Comic Sans MS", 35), text="Are you sure?", bg='#80c1ff')
+        double_check_question.place(relwidth=1, relheight=0.49)
 
         def sure():
             r1_c1['text'] = ""
@@ -77,9 +89,15 @@ def input_board():
         not_sure_button = tk.Button(are_you_sure_frame, font=("Comic Sans MS", 35), text="No", bg='gray', fg='#c63420', command=lambda: not_sure())
         not_sure_button.place(relx=0.51, rely=0.51, relwidth=0.49, relheight=0.49)
 
+    '''
+        Lets the user confirm their input is correct before setting the values of the cubes
+    '''
     def double_check_confirm():
         are_you_sure_frame = tk.Frame(entry_board, bg='#80c1ff', bd=5)
         are_you_sure_frame.place(relx=0.2, rely=0.2, relwidth=0.6, relheight=0.6)
+
+        double_check_question = tk.Label(are_you_sure_frame, font=("Comic Sans MS", 35), text="Are you sure?", bg='#80c1ff')
+        double_check_question.place(relwidth=1, relheight=0.49)
 
         def sure():
             r1_c1['text'] = l1.get().upper()
@@ -106,19 +124,33 @@ def input_board():
         def not_sure():
             are_you_sure_frame.destroy()
 
+        '''
+            Yes button
+        '''
         sure_button = tk.Button(are_you_sure_frame, font=("Comic Sans MS", 35), text="Yes", bg='gray', fg='#c63420', command=lambda: sure())
         sure_button.place(rely=0.51, relwidth=0.49, relheight=0.49)
 
+        '''
+            No button
+        '''
         not_sure_button = tk.Button(are_you_sure_frame, font=("Comic Sans MS", 35), text="No", bg='gray', fg='#c63420', command=lambda: not_sure())
         not_sure_button.place(relx=0.51, rely=0.51, relwidth=0.49, relheight=0.49)
 
-
+    '''
+            Confirm button
+    '''
     confirm_button = tk.Button(entry_button_frame, font=("Comic Sans MS", 35), text="Confirm", bg='gray', fg='#c63420', command=lambda: double_check_confirm())
     confirm_button.place(relheight=1, relwidth=0.49)
 
+    '''
+        Quit button
+    '''
     quit_button = tk.Button(entry_button_frame, font=("Comic Sans MS", 35), text="Quit", bg='gray', fg='#c63420', command=lambda: double_check_quit())
     quit_button.place(relx=0.51, relheight=1, relwidth=0.49)
 
+    '''
+        Creates entry boxes
+    '''
     l1 = tk.Entry(entry_board, bg='yellow', justify='center')
     set_font_open_dyslexic_cubes(l1)
     l1.place(relx=.001,rely=.001, relwidth=.24, relheight=.24)
@@ -187,12 +219,6 @@ def input_board():
     Generate a random new board based on dice
 '''
 def random_board():
-    # if not EMPTY_BOARD:
-    #     board.destroy
-    #     board = tk.Frame(left_side, bg='#80c1ff', bd=10)
-    #     board.place(relx=0.0833, rely=0.214, relwidth=0.83, relheight=0.714)
-    # else:
-    #     EMPTY_BOARD = False
     cubes=[cube_one, cube_two, cube_three, cube_four, cube_five, cube_six, cube_seven, cube_eight, 
     cube_nine, cube_ten, cube_eleven, cube_twelve, cube_thirteen, cube_fourteen, cube_fifteen, cube_sixteen]
 
@@ -226,6 +252,9 @@ def random_board():
 
     letters.clear()
 
+'''
+    Creates a pop-up window of the instructions
+'''
 def instructions():
     instructions = tk.Frame(root, bg='#80c1ff', bd=5)
     instructions.place(relx=.1, rely=.1, relwidth=.8, relheight=.8)
@@ -237,6 +266,9 @@ def instructions():
     x_questions = tk.Button(instructions, text="X", command=instructions.destroy)
     x_questions.place(relx=.94, rely=0.01, relwidth=.05, relheight=.05)
 
+'''
+    Opening Set Up of GUI
+'''
 root = tk.Tk()
 
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH, bg='white')
@@ -258,7 +290,7 @@ button_frame = tk.Frame(left_side, bg='#80c1ff', bd=5)
 button_frame.place(relx=0.0833, rely=0.07, relwidth=0.83, relheight=0.11)
 
 '''
-Creating an empty board
+    Creates an empty board
 '''
 board = tk.Frame(left_side, bg='#80c1ff', bd=10)
 board.place(relx=0.0833, rely=0.214, relwidth=0.83, relheight=0.714)
@@ -328,7 +360,7 @@ set_font_open_dyslexic_cubes(r4_c4)
 r4_c4.place(relx=.76, rely=.76, relwidth=.24, relheight=.24)
 
 '''
-    Button options for type of board
+    Creates button options for type of board
 '''
 input_board_button = tk.Button(button_frame, font=("Comic Sans MS", 35), text="Input Board", bg='gray', fg='#c63420', command=lambda: input_board())
 input_board_button.place(relheight=1, relwidth=0.49)
@@ -337,7 +369,7 @@ random_board_button = tk.Button(button_frame, font=("Comic Sans MS", 35), text="
 random_board_button.place(relx=0.51, relheight=1, relwidth=0.49)
 
 '''
-    Questions button
+    Creates questions button
 '''
 questions = tk.Button(right_side, text="?", command=lambda: instructions())
 questions.place(relx=.94, rely=0.01, relwidth=.05, relheight=.05)

@@ -270,6 +270,7 @@ def instructions():
     Opening Set Up of GUI
 '''
 root = tk.Tk()
+root.title("sima_boggle")
 
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH, bg='white')
 canvas.pack()
@@ -373,5 +374,34 @@ random_board_button.place(relx=0.51, relheight=1, relwidth=0.49)
 '''
 questions = tk.Button(right_side, text="?", command=lambda: instructions())
 questions.place(relx=.94, rely=0.01, relwidth=.05, relheight=.05)
+
+timer_frame = tk.Frame(right_side, bg='green')
+timer_frame.place(relx=.2, rely=.05, width=360, height=110)
+
+def countdown(count):
+    m, s = divmod(count, 60)
+    if m < 10:
+        minutes = "0" + str(m)
+    else:
+        minutes = str(m)
+
+    if s < 10:
+        seconds = "0" + str(s)
+    else:
+        seconds = str(s)
+
+    time_formated = minutes + ":" + seconds
+    timer['text'] = time_formated
+
+    if count > 0:
+        # call countdown again after 1000ms (1s)
+        root.after(1000, countdown, count-1)
+
+timer = tk.Label(timer_frame, font=('Helvetica', 40), justify='center')
+timer.place(relwidth=1, relheight=1)
+
+# call countdown first time    
+countdown(5)
+# root.after(0, countdown, 5)
 
 root.mainloop()

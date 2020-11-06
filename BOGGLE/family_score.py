@@ -9,16 +9,10 @@ def score_word(word):
 
     if len(word) < 3:
         return 0
-    elif len(word) in [3,4]:
+    elif len(word) == 3:
         return 1
-    elif len(word) == 5:
-        return 2
-    elif len(word) == 6:
-        return 3
-    elif len(word) == 7:
-        return 4
-    elif len(word) >= 8:
-        return 11
+    elif len(word) > 3:
+        return len - 3
     else:
         return NotImplementedError
 

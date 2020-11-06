@@ -203,7 +203,7 @@ class left_panel:
             self.quit_button.place(relx=0.51, relheight=1, relwidth=0.49)
 
             '''
-                Creates entry boxes
+                Creates entry boxes and allows the user to navigate using the arrow keys
             '''
             self.l1 = Entry(self.entry_board, bg='yellow', justify='center')
             set_font_open_dyslexic_cubes(self.l1)
@@ -268,6 +268,150 @@ class left_panel:
             self.l16 = Entry(self.entry_board, bg='yellow', justify='center')
             set_font_open_dyslexic_cubes(self.l16)
             self.l16.place(relx=.76, rely=.76, relwidth=.24, relheight=.24)
+
+            '''
+            ARROW KEYS
+            '''
+            def RIGHT(event):
+                if self.root.focus_get() == self.l1:
+                    self.l2.focus()
+                elif self.root.focus_get() == self.l2:
+                    self.l3.focus()
+                elif self.root.focus_get() == self.l3:
+                    self.l4.focus()
+                elif self.root.focus_get() == self.l4:
+                    self.l1.focus()
+                elif self.root.focus_get() == self.l5:
+                    self.l6.focus()
+                elif self.root.focus_get() == self.l6:
+                    self.l7.focus()
+                elif self.root.focus_get() == self.l7:
+                    self.l8.focus()
+                elif self.root.focus_get() == self.l8:
+                    self.l5.focus()
+                elif self.root.focus_get() == self.l9:
+                    self.l10.focus()
+                elif self.root.focus_get() == self.l10:
+                    self.l11.focus()
+                elif self.root.focus_get() == self.l11:
+                    self.l12.focus()
+                elif self.root.focus_get() == self.l12:
+                    self.l9.focus()
+                elif self.root.focus_get() == self.l13:
+                    self.l14.focus()
+                elif self.root.focus_get() == self.l14:
+                    self.l15.focus()
+                elif self.root.focus_get() == self.l15:
+                    self.l16.focus()
+                elif self.root.focus_get() == self.l16:
+                    self.l13.focus()
+
+            def LEFT(event):
+                if self.root.focus_get() == self.l1:
+                    self.l4.focus()
+                elif self.root.focus_get() == self.l2:
+                    self.l1.focus()
+                elif self.root.focus_get() == self.l3:
+                    self.l2.focus()
+                elif self.root.focus_get() == self.l4:
+                    self.l3.focus()
+                elif self.root.focus_get() == self.l5:
+                    self.l8.focus()
+                elif self.root.focus_get() == self.l6:
+                    self.l5.focus()
+                elif self.root.focus_get() == self.l7:
+                    self.l6.focus()
+                elif self.root.focus_get() == self.l8:
+                    self.l7.focus()
+                elif self.root.focus_get() == self.l9:
+                    self.l12.focus()
+                elif self.root.focus_get() == self.l10:
+                    self.l9.focus()
+                elif self.root.focus_get() == self.l11:
+                    self.l10.focus()
+                elif self.root.focus_get() == self.l12:
+                    self.l11.focus()
+                elif self.root.focus_get() == self.l13:
+                    self.l16.focus()
+                elif self.root.focus_get() == self.l14:
+                    self.l13.focus()
+                elif self.root.focus_get() == self.l15:
+                    self.l14.focus()
+                elif self.root.focus_get() == self.l16:
+                    self.l15.focus()
+
+            def UP(event):
+                if self.root.focus_get() == self.l1:
+                    self.l13.focus()
+                elif self.root.focus_get() == self.l2:
+                    self.l14.focus()
+                elif self.root.focus_get() == self.l3:
+                    self.l15.focus()
+                elif self.root.focus_get() == self.l4:
+                    self.l16.focus()
+                elif self.root.focus_get() == self.l5:
+                    self.l1.focus()
+                elif self.root.focus_get() == self.l6:
+                    self.l2.focus()
+                elif self.root.focus_get() == self.l7:
+                    self.l3.focus()
+                elif self.root.focus_get() == self.l8:
+                    self.l4.focus()
+                elif self.root.focus_get() == self.l9:
+                    self.l5.focus()
+                elif self.root.focus_get() == self.l10:
+                    self.l6.focus()
+                elif self.root.focus_get() == self.l11:
+                    self.l7.focus()
+                elif self.root.focus_get() == self.l12:
+                    self.l8.focus()
+                elif self.root.focus_get() == self.l13:
+                    self.l9.focus()
+                elif self.root.focus_get() == self.l14:
+                    self.l10.focus()
+                elif self.root.focus_get() == self.l15:
+                    self.l11.focus()
+                elif self.root.focus_get() == self.l16:
+                    self.l12.focus()
+
+            def DOWN(event):
+                if self.root.focus_get() == self.l1:
+                    self.l5.focus()
+                elif self.root.focus_get() == self.l2:
+                    self.l6.focus()
+                elif self.root.focus_get() == self.l3:
+                    self.l7.focus()
+                elif self.root.focus_get() == self.l4:
+                    self.l8.focus()
+                elif self.root.focus_get() == self.l5:
+                    self.l9.focus()
+                elif self.root.focus_get() == self.l6:
+                    self.l10.focus()
+                elif self.root.focus_get() == self.l7:
+                    self.l11.focus()
+                elif self.root.focus_get() == self.l8:
+                    self.l12.focus()
+                elif self.root.focus_get() == self.l9:
+                    self.l13.focus()
+                elif self.root.focus_get() == self.l10:
+                    self.l14.focus()
+                elif self.root.focus_get() == self.l11:
+                    self.l15.focus()
+                elif self.root.focus_get() == self.l12:
+                    self.l16.focus()
+                elif self.root.focus_get() == self.l13:
+                    self.l1.focus()
+                elif self.root.focus_get() == self.l14:
+                    self.l2.focus()
+                elif self.root.focus_get() == self.l15:
+                    self.l3.focus()
+                elif self.root.focus_get() == self.l16:
+                    self.l4.focus()
+
+            self.root.bind("<Right>", RIGHT)
+            self.root.bind("<Left>", LEFT)
+            self.root.bind("<Up>", UP)
+            self.root.bind("<Down>", DOWN)
         
         '''
             Create button options for type of board

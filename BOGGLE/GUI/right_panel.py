@@ -25,8 +25,17 @@ class right_panel:
             self.x_questions = Button(self.instructions, text="X", command=self.instructions.destroy)
             self.x_questions.place(relx=.94, rely=0.01, relwidth=.05, relheight=.05)
 
-        self.timer_frame = Frame(frame, bg='green')
-        self.timer_frame.place(relx=.2, rely=.05, width=360, height=110)
+        self.clicked = StringVar()
+        self.clicked.set("Number of Players")
+
+        # self.options = [2,3,4,5,6,7,8,9,10]
+        # self.drop = OptionMenu(frame, self.clicked, *self.options)
+        # self.drop['width'] = 53
+        # self.drop.config(font=('Helvetica',20)) 
+        # self.drop.place(relx=.3, rely=.1, relwidth=.4, relheight=.05)
+
+        self.timer_frame = Frame(frame, bg='#fa9300', bd=5)
+        self.timer_frame.place(relx=0.0833, rely=0.07, relwidth=0.83, relheight=0.11)
 
         def countdown(count):
             m, s = divmod(count, 60)
@@ -43,11 +52,16 @@ class right_panel:
             time_formated = minutes + ":" + seconds
             self.timer['text'] = time_formated
 
-            if count > 0:
+            if count >= 0:
                 # call countdown again after 1000ms (1s)
                 self.root.after(1000, countdown, count-1)
+            
+            if count == -1:
+                self.root.after(50)
+                self.timer['fg']='#c63420'
+                self.timer['text'] = "Time's up!"
 
-        self.timer = Label(self.timer_frame, font=('Helvetica', 40), justify='center')
+        self.timer = Label(self.timer_frame, font=("Comic Sans MS", 35), fg = 'black', justify='center')
         self.timer.place(relwidth=1, relheight=1)
 
         # call countdown first time    

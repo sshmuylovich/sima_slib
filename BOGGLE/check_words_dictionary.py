@@ -1,5 +1,6 @@
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError
+from nltk.corpus import wordnet as wn
 import time
 
 def check_word_recurse (word, time_bound):
@@ -53,5 +54,9 @@ def check_word (word, time_limit=15.0):
     Returns:
         boolean: whether the word is a real word.
     '''
-
+    if wn.synsets(word):
+        return True
+    else
+        return False
+    
     return check_word_recurse(word, time.time() + time_limit)

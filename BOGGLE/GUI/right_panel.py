@@ -56,14 +56,20 @@ class right_panel:
                 # call countdown again after 1000ms (1s)
                 self.root.after(1000, countdown, count-1)
             
+            if count in range (0, 5):
+                self.timer['fg']='red'
+
             if count == -1:
                 self.root.after(50)
                 self.timer['fg']='#c63420'
                 self.timer['text'] = "Time's up!"
 
         self.timer = Label(self.timer_frame, font=("Comic Sans MS", 35), fg = 'black', justify='center')
-        self.timer.place(relwidth=1, relheight=1)
+        self.timer.place(relwidth=.93, relheight=1)
+
+        self.x_timer = Button(self.timer_frame, text="X", command=self.timer_frame.destroy) #Can't change bg color, want to
+        self.x_timer.place(relx=.94, rely=0.01, relwidth=.06, relheight=1)
 
         # call countdown first time    
-        countdown(5)
+        countdown(6)
         # root.after(0, countdown, 5)

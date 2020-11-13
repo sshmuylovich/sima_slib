@@ -1,5 +1,6 @@
 from tkinter import*
 import random
+from data import*
 
 class left_panel:
     def __init__(self, root, frame):
@@ -113,6 +114,7 @@ class left_panel:
                 self.double_check_question.place(relwidth=1, relheight=0.49)
 
                 def sure():
+                    clear_letters()
                     self.r1_c1['text'] = ""
                     self.r1_c2['text'] = ""
                     self.r1_c3['text'] = ""
@@ -154,26 +156,72 @@ class left_panel:
                 self.double_check_question.place(relwidth=1, relheight=0.49)
 
                 def sure():
-                    self.r1_c1['text'] = self.l1.get().upper()
-                    self.r1_c2['text'] = self.l2.get().upper()
-                    self.r1_c3['text'] = self.l3.get().upper()
-                    self.r1_c4['text'] = self.l4.get().upper()
-                    self.r2_c1['text'] = self.l5.get().upper()
-                    self.r2_c2['text'] = self.l6.get().upper()
-                    self.r2_c3['text'] = self.l7.get().upper()
-                    self.r2_c4['text'] = self.l8.get().upper()
-                    self.r3_c1['text'] = self.l9.get().upper()
-                    self.r3_c2['text'] = self.l10.get().upper()
-                    self.r3_c3['text'] = self.l11.get().upper()
-                    self.r3_c4['text'] = self.l12.get().upper()
-                    self.r4_c1['text'] = self.l13.get().upper()
-                    self.r4_c2['text'] = self.l14.get().upper()
-                    self.r4_c3['text'] = self.l15.get().upper()
-                    self.r4_c4['text'] = self.l16.get().upper()
+                    set_letter(0, self.l1.get().upper())
+                    set_letter(1, self.l2.get().upper())
+                    set_letter(2, self.l3.get().upper())
+                    set_letter(3, self.l4.get().upper())
+                    set_letter(4, self.l5.get().upper())
+                    set_letter(5, self.l6.get().upper())
+                    set_letter(6, self.l7.get().upper())
+                    set_letter(7, self.l8.get().upper())
+                    set_letter(8, self.l9.get().upper())
+                    set_letter(9, self.l10.get().upper())
+                    set_letter(10, self.l11.get().upper())
+                    set_letter(11, self.l12.get().upper())
+                    set_letter(12, self.l13.get().upper())
+                    set_letter(13, self.l14.get().upper())
+                    set_letter(14, self.l15.get().upper())
+                    set_letter(15, self.l16.get().upper())
 
-                    self.are_you_sure_frame.destroy()
-                    self.entry_board.destroy()
-                    self.entry_button_frame.destroy()
+                    if check_letters() == False:
+                        self.are_you_sure_frame.destroy()
+                        
+                        self.incorrect_input = Frame(self.entry_board, bg='#80c1ff', bd=5)
+                        self.incorrect_input.place(relx=0.2, rely=0.3, relwidth=0.6, relheight=0.4)
+
+                        self.try_again_input = Label(self.incorrect_input, font=("Comic Sans MS", 25), text="Something went wrong\n with your input.\nPlease try again?", bg='#80c1ff')
+                        self.try_again_input.place(rely=.1, relwidth=1, relheight=.85)
+                        
+                        self.x_try_again = Button(self.incorrect_input, text="X", command=self.incorrect_input.destroy)
+                        self.x_try_again.place(relx=.9, rely=0.07, relwidth=.1, relheight=.15)
+
+                        # self.l1.delete(0, 'end')
+                        # self.l2.delete(0, 'end')
+                        # self.l3.delete(0, 'end')
+                        # self.l4.delete(0, 'end')
+                        # self.l5.delete(0, 'end')
+                        # self.l6.delete(0, 'end')
+                        # self.l7.delete(0, 'end')
+                        # self.l8.delete(0, 'end')
+                        # self.l9.delete(0, 'end')
+                        # self.l10.delete(0, 'end')
+                        # self.l11.delete(0, 'end')
+                        # self.l12.delete(0, 'end')
+                        # self.l13.delete(0, 'end')
+                        # self.l14.delete(0, 'end')
+                        # self.l15.delete(0, 'end')
+                        # self.l16.delete(0, 'end')
+                    else:
+                        self.r1_c1['text'] = get_letter(0)
+                        self.r1_c2['text'] = get_letter(1)
+                        self.r1_c3['text'] = get_letter(2)
+                        self.r1_c4['text'] = get_letter(3)
+                        self.r2_c1['text'] = get_letter(4)
+                        self.r2_c2['text'] = get_letter(5)
+                        self.r2_c3['text'] = get_letter(6)
+                        self.r2_c4['text'] = get_letter(7)
+                        self.r3_c1['text'] = get_letter(8)
+                        self.r3_c2['text'] = get_letter(9)
+                        self.r3_c3['text'] = get_letter(10)
+                        self.r3_c4['text'] = get_letter(11)
+                        self.r4_c1['text'] = get_letter(12)
+                        self.r4_c2['text'] = get_letter(13)
+                        self.r4_c3['text'] = get_letter(14)
+                        self.r4_c4['text'] = get_letter(15)
+
+                        self.are_you_sure_frame.destroy()
+                        self.entry_board.destroy()
+                        self.entry_button_frame.destroy()
 
                 def not_sure():
                     self.are_you_sure_frame.destroy()
@@ -280,7 +328,7 @@ class left_panel:
                 elif self.root.focus_get() == self.l3:
                     self.l4.focus()
                 elif self.root.focus_get() == self.l4:
-                    self.l1.focus()
+                    self.l1.focus() #should this be l5?
                 elif self.root.focus_get() == self.l5:
                     self.l6.focus()
                 elif self.root.focus_get() == self.l6:
@@ -288,7 +336,7 @@ class left_panel:
                 elif self.root.focus_get() == self.l7:
                     self.l8.focus()
                 elif self.root.focus_get() == self.l8:
-                    self.l5.focus()
+                    self.l5.focus() #should this be l9?
                 elif self.root.focus_get() == self.l9:
                     self.l10.focus()
                 elif self.root.focus_get() == self.l10:
@@ -296,7 +344,7 @@ class left_panel:
                 elif self.root.focus_get() == self.l11:
                     self.l12.focus()
                 elif self.root.focus_get() == self.l12:
-                    self.l9.focus()
+                    self.l9.focus() #should this be l13?
                 elif self.root.focus_get() == self.l13:
                     self.l14.focus()
                 elif self.root.focus_get() == self.l14:
@@ -304,7 +352,7 @@ class left_panel:
                 elif self.root.focus_get() == self.l15:
                     self.l16.focus()
                 elif self.root.focus_get() == self.l16:
-                    self.l13.focus()
+                    self.l13.focus() #should this be l1?
 
             def LEFT(event):
                 if self.root.focus_get() == self.l1:
@@ -426,56 +474,23 @@ class left_panel:
             Generate a random new board based on dice
         '''
         def random_board():
-            '''
-                Creates the dice which have letters on each side --> Array of length 6 per die
-            '''
-            self.cube_one = ["A","A","E","E","G","N"]
-            self.cube_two = ["A","O","O","T","T","W"]
-            self.cube_three = ["D","I","S","T","T","Y"]
-            self.cube_four = ["E","I","O","S","S","T"]
-            self.cube_five = ["A","B","B","J","O","O"]
-            self.cube_six = ["C","I","M","O","T","U"]
-            self.cube_seven = ["E","E","G","H","N","W"]
-            self.cube_eight = ["E","L","R","T","T","Y"]
-            self.cube_nine = ["A","C","H","O","P","S"]
-            self.cube_ten = ["D","E","I","L","R","X"]
-            self.cube_eleven = ["E","E","I","N","S","U"]
-            self.cube_twelve = ["H","I","M","N","QU","U"]
-            self.cube_thirteen = ["A","F","F","K","P","S"]
-            self.cube_fourteen = ["D","E","L","R","V","Y"]
-            self.cube_fifteen = ["E","H","R","T","V","W"]
-            self.cube_sixteen = ["H","L","N","N","R","Z"]
+            random_values()
 
+            self.r1_c1['text'] = get_letter(0)
+            self.r1_c2['text'] = get_letter(1)
+            self.r1_c3['text'] = get_letter(2)
+            self.r1_c4['text'] = get_letter(3)
+            self.r2_c1['text'] = get_letter(4)
+            self.r2_c2['text'] = get_letter(5)
+            self.r2_c3['text'] = get_letter(6)
+            self.r2_c4['text'] = get_letter(7)
+            self.r3_c1['text'] = get_letter(8)
+            self.r3_c2['text'] = get_letter(9)
+            self.r3_c3['text'] = get_letter(10)
+            self.r3_c4['text'] = get_letter(11)
+            self.r4_c1['text'] = get_letter(12)
+            self.r4_c2['text'] = get_letter(13)
+            self.r4_c3['text'] = get_letter(14)
+            self.r4_c4['text'] = get_letter(15)
 
-            self.cubes=[self.cube_one, self.cube_two, self.cube_three, self.cube_four, self.cube_five, self.cube_six, self.cube_seven, self.cube_eight, 
-            self.cube_nine, self.cube_ten, self.cube_eleven, self.cube_twelve, self.cube_thirteen, self.cube_fourteen, self.cube_fifteen, self.cube_sixteen]
-
-            self.cubes_temp = []
-
-            self.letters = []
-
-            for x in range (0, 16):
-                self.random_cube = random.choice(self.cubes)
-                self.cubes_temp.append(self.random_cube)
-                self.cubes.remove(self.random_cube)
-                self.random_letter = random.choice(self.random_cube)
-                self.letters.append(self.random_letter)
-
-            self.r1_c1['text'] = self.letters[0]
-            self.r1_c2['text'] = self.letters[1]
-            self.r1_c3['text'] = self.letters[2]
-            self.r1_c4['text'] = self.letters[3]
-            self.r2_c1['text'] = self.letters[4]
-            self.r2_c2['text'] = self.letters[5]
-            self.r2_c3['text'] = self.letters[6]
-            self.r2_c4['text'] = self.letters[7]
-            self.r3_c1['text'] = self.letters[8]
-            self.r3_c2['text'] = self.letters[9]
-            self.r3_c3['text'] = self.letters[10]
-            self.r3_c4['text'] = self.letters[11]
-            self.r4_c1['text'] = self.letters[12]
-            self.r4_c2['text'] = self.letters[13]
-            self.r4_c3['text'] = self.letters[14]
-            self.r4_c4['text'] = self.letters[15]
-
-            self.letters.clear()
+            clear_letters()

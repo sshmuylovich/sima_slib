@@ -53,12 +53,19 @@ Date: Oct 28, 2020, Jeffrey Pan (jeffreyzpan)
 - Added recursive function to check whether a given word is in the board
   - [Pull Request](https://github.com/sshmuylovich/sima_boggle/commit/aed2288e7c06161babcda5d4b00b5cd900f5d2c9)
 
-Date: Oct 29, 2020, Alex Turk (iRover108)
+Date: Oct 29, 2020, Alex Turk (iRove108)
 - Move misplaced imports from family_score.py to check_words_dictionary.py
   - [Pull Request](https://github.com/sshmuylovich/sima_boggle/commit/f237d599804b0663978d860ec7bf9f63ab1ef0d3)
 - Improve documentation/readability of board.py
   - [Pull Request](https://github.com/sshmuylovich/sima_boggle/commit/5cee33f5c90e407518be7e534cae4ef97e82322b)
-
+  
+Date: Nov 5, 2020, Amy Jiang (ajiang)
+- Implemented dictionary API for check_words function
+  - [Pull Request](https://github.com/sshmuylovich/sima_boggle/pull/15/commits/c8d456c5ab79718a6713fe963a5d5ad937307f16)
+  
+  Date: Nov 6, 2020, Koki Kapoor (kokikapoor)
+- Wrote instructions on how to set a default font for the Tkinter API
+  - [Pull Request](https://github.com/sshmuylovich/sima_boggle/pull/16/commits/e6cf81175e40bf4b88480dd81a9a666ece699bf0)
 
 
 ## Template
